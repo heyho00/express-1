@@ -74,3 +74,25 @@ npx nodemon app.ts
 ```
 
 이러면 서버가 떠있게 됨.
+
+<br>
+
+## Rest API
+
+대개는 “필딩 제약 조건” 4가지를 모두 만족하지 않고, Resource와 HTTP Verb만 도입하는 수준으로 사용.
+
+GET/POST/PUT/PATCH/DELETE 등을 이용한다.
+
+PUT은 덮어쓰기
+PATCH는 일부 수정.
+
+- 이렇게 안 하고: /write-post
+- 이렇게 하자: /posts → 뭔가를 한다 (CRUD)
+
+기본 리소스 URL: /products
+
+1. Read (Collection) → GET /products ⇒ 상품 목록 확인
+2. Read (Item) → GET /products/{id} ⇒ 특정 상품 정보 확인
+3. Create (Collection Pattern 활용) → POST /products ⇒ 상품 추가 (JSON 정보 함께 전달)
+4. Update (Item) → PUT 또는 PATCH /products/{id} ⇒ 특정 상품 정보 변경 (JSON 정보 함께 전달)
+5. Delete (Item) → DELETE /products/{id} ⇒ 특정 상품 삭제
