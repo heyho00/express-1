@@ -56,3 +56,21 @@ package.json script에
  "lint": "eslint --fix ."
  추가해주면 린트 자동 적용
 ```
+
+<br>
+
+## nodemon
+
+코드에 수정이 있을때, 제가 알아서 HOT reload 해주지 않는다.
+
+매번 재실행 해야 하는 문제를 피하기 위해 nodemon을 사용.
+
+앞에 설치한 ts-node에 대한 의존성이 있기 때문에 꼭 설치해주자.
+
+```bash
+npm i -D nodemon
+
+npx nodemon app.ts
+```
+
+이러면 서버가 떠있게 됨.
