@@ -51,4 +51,8 @@ npm i -D ts-node
 
 npm i express
 npm i -D @types/express
+
+package.json script에 
+ "lint": "eslint --fix ."
+ 추가해주면 린트 자동 적용
 ```
